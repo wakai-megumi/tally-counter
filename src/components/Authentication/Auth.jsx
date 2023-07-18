@@ -33,11 +33,10 @@ const Auth = ({ open }) => {
 
                 dispatch(setUser(user.email));
                 // reload the page
-                window.location.reload();
+                // window.location.reload();
             } else {
                 // User is signed out
                 dispatch(clearUser());
-                window.location.reload();
 
             }
         });
@@ -68,6 +67,8 @@ const Auth = ({ open }) => {
             // User logged in successfully
             toast.success('User logged in successfully')
             open(false)
+            window.location.reload();
+
 
         } catch (error) {
             console.log(error.message);
@@ -79,17 +80,6 @@ const Auth = ({ open }) => {
         }
     };
 
-    const handleSignOut = async () => {
-        try {
-            await auth.signOut();
-            // User logged out successfully
-            toast.success('User logged out successfully')
-        } catch (error) {
-            console.log(error.message);
-            // Handle log-out error
-            toast.error("error occurs")
-        }
-    };
 
     return (
         <div className='auth-container '>

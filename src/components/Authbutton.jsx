@@ -21,6 +21,7 @@ const Authbutton = () => {
             // User logged out successfully
             dispatch(clearUser())
             toast.success('User logged out successfully')
+            window.location.reload();
 
         } catch (error) {
             console.log(error.message);
