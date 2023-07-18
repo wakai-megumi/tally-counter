@@ -4,6 +4,6 @@ import userReducer from './UserReducers'; // Create the rootReducer by combining
 const rootReducer = combineReducers({
     user: userReducer
 })
-const store = createStore(rootReducer);
+const Store = createStore(rootReducer);
 
-export default store;
+export default Store;
