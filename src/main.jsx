@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom/client'
 import App from './App.jsx'
 import './index.css'
 import { Provider } from 'react-redux';
-import Store from '../src/redux-utils/store';
+import Store from '../src/redux-utils/Store.jsx';
 
 // Start tracking events
 ReactDOM.createRoot(document.getElementById('root')).render(
