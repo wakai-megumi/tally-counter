@@ -4,6 +4,7 @@ import "../styles/MainPage.css"
 import { getFirestore, collection, addDoc, query, where, getDocs } from 'firebase/firestore';
 import { firestore } from '../FireBase';
 import { useSelector } from 'react-redux';
+import { toast } from 'react-hot-toast';
 
 
 const MainPage = () => {
@@ -84,8 +85,11 @@ const MainPage = () => {
             if (batch.length > 0) {
                 await Promise.all(batch);
                 console.log('Counters saved successfully!');
+                toast.success("Counters saved successfully!")
             } else {
                 console.log('No valid counters to save');
+                toast.error("No valid counters to save")
+
             }
         } catch (error) {
             console.log(error.message);
