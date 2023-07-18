@@ -68,6 +68,7 @@ const MainPage = () => {
         try {
             if (email === null) {
                 console.log('User is not logged in');
+                toast.error("please login first")
                 console.log(user)
                 return;
             }
