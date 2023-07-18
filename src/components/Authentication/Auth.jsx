@@ -67,7 +67,6 @@ const Auth = ({ open }) => {
             // User logged in successfully
             toast.success('User logged in successfully')
             open(false)
-            window.location.reload();
 
 
         } catch (error) {
