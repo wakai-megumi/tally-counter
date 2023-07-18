@@ -32,9 +32,13 @@ const Auth = ({ open }) => {
                 // User is signed in
 
                 dispatch(setUser(user.email));
+                // reload the page
+                window.location.reload();
             } else {
                 // User is signed out
                 dispatch(clearUser());
+                window.location.reload();
+
             }
         });
 
