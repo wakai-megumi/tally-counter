@@ -1,0 +1,11 @@
+.counter-container {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+.main-page {
+  display: flex;
+  gap: 1rem;
+  flex-direction: column;
+  align-items: center;
+}
